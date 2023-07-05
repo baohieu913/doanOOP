@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1200.0" style="-fx-background-color: F2F0FF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarian.Admin.controllerAdmin">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="1200.0">
+         <top>
+            <AnchorPane prefHeight="200.0" prefWidth="1200.0" style="-fx-background-color: #F5FFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="180.0" prefWidth="585.0" style="-fx-background-color: #F5FFFF; -fx-border-radius: 5px; -fx-border-style: solid;">
+                     <children>
+                        <GridPane prefHeight="180.0" prefWidth="585.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="120.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="469.0" minWidth="10.0" prefWidth="465.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fx:id="avatarView" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowSpan="3">
+                                 <image>
+                                    <Image url="@../../../../../resources/IMG/avatar.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" text="Mã thủ thư :" />
+                                    <Label fx:id="employeId" layoutX="115.0" layoutY="10.0" prefHeight="21.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" text="Họ tên :" />
+                                    <Label fx:id="employeName" layoutX="70.0" layoutY="10.0" prefHeight="21.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" />
+                                    <Label fx:id="employeSex" layoutX="100.0" layoutY="10.0" />
+                                    <Label layoutX="10.0" layoutY="8.0" text="Giới tính : " />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" text="Ngày sinh :" />
+                                    <Label fx:id="dateOfBirth" layoutX="87.0" layoutY="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" text="SĐT : " />
+                                    <Label fx:id="phoneNumber" layoutX="48.0" layoutY="10.0" />
+                                    <Label layoutX="140.0" layoutY="10.0" text="Gmail :" />
+                                    <Label fx:id="email" layoutX="190.0" layoutY="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <Label text="Thủ thư " />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#chooseAvatar" styleClass="btn" stylesheets="@../../Readers/ReaderFunction/applicationReaders.css" text="Đổi ảnh" textFill="#f76666" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="610.0" layoutY="10.0" prefHeight="180.0" prefWidth="585.0" style="-fx-background-color: #F5FFFF; -fx-border-radius: 5px; -fx-border-style: solid;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="180.0" prefWidth="590.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../resources/IMG/logoDHXD.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #F5FFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="310.0" fitWidth="180.0" layoutX="15.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/IMG/banner1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="295.0" fitWidth="180.0" layoutX="15.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/IMG/banner3.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Nhập sách">
+                           <content>
+                              <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: B9B9B9;">
+                                 <content>
+                                    <AnchorPane prefWidth="800.0" style="-fx-background-color: B9B9B9B9;">
+                                       <children>
+                                          <AnchorPane layoutX="10.0" layoutY="220.0" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: FFFFFF; -fx-border-style: solid; -fx-border-radius: 5px;">
+                                             <children>
+                                                <GridPane prefHeight="200.0" prefWidth="380.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="118.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="262.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="62.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowSpan="2">
+                                                         <image>
+                                                            <Image url="@../../resources/IMG/img/saas.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <children>
+                                                            <Button mnemonicParsing="false" onAction="#cancel1" text="Hủy " />
+                                                         </children>
+                                                      </HBox>
+                                                      <AnchorPane prefHeight="92.0" prefWidth="262.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Label layoutX="100.0" layoutY="55.0" />
+                                                            <Label layoutX="5.0" layoutY="53.0" text="Số lượng :" />
+                                                            <TextField fx:id="numberBook1" layoutX="80.0" layoutY="50.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                            <Label layoutX="5.0" layoutY="11.0" text="Mã sách : " />
+                                                            <TextField fx:id="codeBook1" layoutX="80.0" layoutY="4.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="210.0" prefWidth="800.0" style="-fx-background-color: FFFFFF; -fx-border-radius: 5px;">
+                                             <children>
+                                                <GridPane prefHeight="200.0" prefWidth="800.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label layoutX="14.0" layoutY="20.0" text="Mã đơn hàng : " />
+                                                            <Label fx:id="orderCode" layoutX="118.0" layoutY="20.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Label layoutX="14.0" layoutY="15.0" text="Mã thủ thư quản lý :" />
+                                                            <Label fx:id="manageAD" layoutX="155.0" layoutY="15.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                         <children>
+                                                            <Label layoutX="14.0" layoutY="15.0" text="Ngày nhập: " />
+                                                            <DatePicker fx:id="dateAdd" layoutX="142.0" layoutY="10.0" prefWidth="180.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                         <children>
+                                                            <Label layoutX="14.0" layoutY="15.0" text="Giá trị đơn hàng : " />
+                                                            <TextField fx:id="orderPrice" layoutX="142.0" layoutY="10.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="saveButton" layoutX="348.0" layoutY="640.0" mnemonicParsing="false" onAction="#save" text="Thanh toán" />
+                                          <AnchorPane layoutX="400.0" layoutY="220.0" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: FFFFFF; -fx-border-style: solid; -fx-border-radius: 5px;">
+                                             <children>
+                                                <GridPane prefHeight="200.0" prefWidth="380.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="118.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="262.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="62.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowSpan="2">
+                                                         <image>
+                                                            <Image url="@../../resources/IMG/img/saas.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <children>
+                                                            <Button mnemonicParsing="false" onAction="#cancel2" text="Hủy " />
+                                                         </children>
+                                                      </HBox>
+                                                      <AnchorPane prefHeight="92.0" prefWidth="262.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Label layoutX="100.0" layoutY="55.0" />
+                                                            <Label layoutX="5.0" layoutY="53.0" text="Số lượng :" />
+                                                            <TextField fx:id="numberBook2" layoutX="80.0" layoutY="50.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                            <Label layoutX="5.0" layoutY="12.0" text="Mã sách : " />
+                                                            <TextField fx:id="codeBook2" layoutX="80.0" layoutY="5.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="430.0" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: FFFFFF; -fx-border-style: solid; -fx-border-radius: 5px;">
+                                             <children>
+                                                <GridPane prefHeight="200.0" prefWidth="380.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="118.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="262.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="62.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowSpan="2">
+                                                         <image>
+                                                            <Image url="@../../resources/IMG/img/saas.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <children>
+                                                            <Button mnemonicParsing="false" onAction="#cancel3" text="Hủy " />
+                                                         </children>
+                                                      </HBox>
+                                                      <AnchorPane prefHeight="92.0" prefWidth="262.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Label layoutX="100.0" layoutY="55.0" />
+                                                            <Label layoutX="5.0" layoutY="53.0" text="Số lượng :" />
+                                                            <TextField fx:id="numberBook3" layoutX="80.0" layoutY="50.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                            <Label layoutX="5.0" layoutY="13.0" text="Mã sách : " />
+                                                            <TextField fx:id="codeBook3" layoutX="80.0" layoutY="6.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="400.0" layoutY="430.0" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: FFFFFF; -fx-border-style: solid; -fx-border-radius: 5px;">
+                                             <children>
+                                                <GridPane prefHeight="200.0" prefWidth="380.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="118.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="262.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="62.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowSpan="2">
+                                                         <image>
+                                                            <Image url="@../../resources/IMG/img/saas.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <children>
+                                                            <Button mnemonicParsing="false" onAction="#cancel4" text="Hủy " />
+                                                         </children>
+                                                      </HBox>
+                                                      <AnchorPane prefHeight="92.0" prefWidth="262.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Label layoutX="100.0" layoutY="55.0" />
+                                                            <Label layoutX="5.0" layoutY="53.0" text="Số lượng :" />
+                                                            <TextField fx:id="numberBook4" layoutX="80.0" layoutY="50.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                            <Label layoutX="5.0" layoutY="12.0" text="Mã sách : " />
+                                                            <TextField fx:id="codeBook4" layoutX="80.0" layoutY="5.0" prefHeight="31.0" prefWidth="180.0" styleClass="tf" stylesheets="@appAdmin.css" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                      </Tab>
+                        <Tab text="Thêm thông tin sách">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="540.0" prefWidth="780.0" style="-fx-background-color: FFFFFF;">
+                                       <children>
+                                          <GridPane prefHeight="400.0" prefWidth="800.0" stylesheets="@appAdmin.css">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Mã sách :" />
+                                                      <TextField fx:id="codeBook_" styleClass="tf">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Label text="Thể loại :" />
+                                                      <TextField fx:id="typeBook" styleClass="tf">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Label text="Mã NXB :" />
+                                                      <TextField fx:id="codePublish" styleClass="tf">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Label text="Mã tác giả :" />
+                                                      <TextField fx:id="codeAuthor" styleClass="tf">
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Label text="Năm xuất bản :" />
+                                                      <TextField fx:id="yearPublish" styleClass="tf" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Label text="Ngôn ngữ :" />
+                                                      <TextField fx:id="languagesBook" styleClass="tf">
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                   <children>
+                                                      <Label text="Giá tiền (VNĐ) :" />
+                                                      <TextField fx:id="bookPrice" styleClass="tf">
+                                                         <HBox.margin>
+                                                            <Insets left="22.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#addInfoBook" prefHeight="40.0" prefWidth="85.0" styleClass="btn" text="Thêm" />
+                                                      <Button mnemonicParsing="false" onAction="#cancelInfoBook" prefHeight="40.0" prefWidth="85.0" styleClass="btn" text="Hủy" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="9">
+                                                   <children>
+                                                      <TextField fx:id="nameAuthorS" promptText="Tác giả" styleClass="tf">
+                                                         <HBox.margin>
+                                                            <Insets right="40.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6" GridPane.rowSpan="3">
+                                                   <children>
+                                                      <TextArea fx:id="introBook" prefHeight="200.0" prefWidth="380.0" promptText="Giới thiệu về sách..." />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Label text="Tên sách :" />
+                                                      <TextField fx:id="nameBook_" styleClass="tf" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowSpan="5">
+                                                   <children>
+                                                      <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../../../../resources/IMG/f311f616ebf134af6de0.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Thêm thông tin NXB">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane prefHeight="561.0" prefWidth="800.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="561.0" prefWidth="800.0">
+                                             <children>
+                                                <AnchorPane prefWidth="800.0">
+                                                   <children>
+                                                      <GridPane prefHeight="320.0" prefWidth="800.0" stylesheets="@appAdmin.css">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+                                                               <children>
+                                                                  <Label text="Mã NXB :" />
+                                                                  <TextField fx:id="codePublish_" styleClass="tf" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+                                                               <children>
+                                                                  <Label text="Tên NXB :" />
+                                                                  <TextField fx:id="namePublish" styleClass="tf" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="3">
+                                                               <children>
+                                                                  <Label text="Địa chỉ :" />
+                                                                  <TextField fx:id="addressPublish" styleClass="tf">
+                                                                     <HBox.margin>
+                                                                        <Insets left="14.0" />
+                                                                     </HBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="4">
+                                                               <children>
+                                                                  <Label text="Gmail :" />
+                                                                  <TextField fx:id="emailPublish" styleClass="tf">
+                                                                     <HBox.margin>
+                                                                        <Insets left="15.0" />
+                                                                     </HBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="5">
+                                                               <children>
+                                                                  <Label text="SĐT :" />
+                                                                  <TextField fx:id="phonePublish" styleClass="tf">
+                                                                     <HBox.margin>
+                                                                        <Insets left="22.0" />
+                                                                     </HBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="6">
+                                                               <children>
+                                                                  <Label text="Đại diện :" />
+                                                                  <TextField fx:id="representPublish" styleClass="tf" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#addInfoPublisher" prefHeight="41.0" prefWidth="88.0" styleClass="btn" stylesheets="@appAdmin.css" text="Thêm" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#delInfoPublisher" prefHeight="41.0" prefWidth="88.0" styleClass="btn" stylesheets="@appAdmin.css" text="Xóa" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelInfoPublisher" prefHeight="41.0" prefWidth="88.0" styleClass="btn" text="Hủy" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutY="320.0" prefWidth="800.0">
+                                                   <children>
+                                                      <TableView fx:id="publishTable" prefWidth="800.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="codePublishColumn" prefWidth="60.79997330904007" text="Mã NXB" />
+                                                          <TableColumn fx:id="namePublishColumn" prefWidth="127.99993515014648" text="Tên NXB" />
+                                                            <TableColumn fx:id="addressPublishColumn" minWidth="0.0" prefWidth="170.4000701904297" text="Địa chỉ" />
+                                                            <TableColumn fx:id="emailPublishColumn" prefWidth="174.39996337890625" text="Gmail" />
+                                                            <TableColumn fx:id="phonePublishColumn" minWidth="0.0" prefWidth="124.0" text="SĐT" />
+                                                            <TableColumn fx:id="representPublishColumn" prefWidth="136.79998779296875" text="Đại diện" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Thêm thông tin tác giả">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane prefHeight="561.0" prefWidth="800.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="561.0" prefWidth="800.0">
+                                             <children>
+                                                <AnchorPane prefWidth="800.0">
+                                                   <children>
+                                                      <GridPane prefWidth="800.0" stylesheets="@appAdmin.css">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+                                                               <children>
+                                                                  <Label text="Mã tác giả :" />
+                                                                  <TextField fx:id="codeAuthor_" styleClass="tf" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+                                                               <children>
+                                                                  <Label text="Tên tác giả :" />
+                                                                  <TextField fx:id="nameAuthor" styleClass="tf" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="3">
+                                                               <children>
+                                                                  <Label text="Năm sinh :" />
+                                                                  <TextField fx:id="birthOfYearAuthor" styleClass="tf">
+                                                                     <HBox.margin>
+                                                                        <Insets left="7.0" />
+                                                                     </HBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="4">
+                                                               <children>
+                                                                  <Label text="Năm mất :" />
+                                                                  <TextField fx:id="deathOfYearAuthor" styleClass="tf">
+                                                                     <HBox.margin>
+                                                                        <Insets left="8.0" />
+                                                                     </HBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                                                               <children>
+                                                                  <TextArea fx:id="bioAuthor" prefHeight="200.0" prefWidth="220.0" promptText="Tiểu sử" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#addInfoAuthor" prefHeight="37.0" prefWidth="80.0" styleClass="btn" text="Thêm" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#delInfoAuthor" prefHeight="75.0" prefWidth="80.0" styleClass="btn" text="Xóa" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelInfoAuthor" prefHeight="30.0" prefWidth="80.0" styleClass="btn" text="Hủy" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutY="245.0" prefWidth="800.0">
+                                                   <children>
+                                                      <TableView fx:id="authorTable" prefWidth="800.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="codeAuthorColumn" prefWidth="75.0" text="Mã tác giả" />
+                                                            <TableColumn fx:id="nameAuthorColumn" prefWidth="141.5999755859375" text="Tên tác giả" />
+                                                            <TableColumn fx:id="birthYearAuthorColumn" prefWidth="88.00001525878906" text="Năm sinh" />
+                                                            <TableColumn fx:id="deathYearAuthorColumn" prefWidth="90.39996337890625" text="Năm mất" />
+                                                            <TableColumn fx:id="bioAuthorColumn" prefWidth="395.199951171875" text="Tiểu sử" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #F5FFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="600.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/IMG/banner2.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

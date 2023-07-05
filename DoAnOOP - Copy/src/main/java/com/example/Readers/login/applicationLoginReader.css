@@ -1,0 +1,19 @@
+.tf {
+    -fx-border-color: E4E4E4;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0 0 1 0;
+    -fx-padding: 0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 0;
+}
+
+.btn {
+    -fx-background-radius: 40px;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+    -fx-background-color:  #8192FF;
+}
+
+.btn:hover {
+    -fx-opacity: 0.7;
+}

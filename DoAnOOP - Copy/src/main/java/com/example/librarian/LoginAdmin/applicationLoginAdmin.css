@@ -1,0 +1,20 @@
+.btn {
+    -fx-border-radius: 34px;
+    -fx-background-color:  #8192FF;
+    -fx-font-weight: bold;
+    -fx-cursor: pointer;
+    -fx-font-family: Helvetica, Arial, sans-serif;
+    -fx-background-radius: 40px;
+}
+.btn:hover {
+    -fx-opacity: 0.7;
+}
+
+.tf {
+    -fx-border-color: E4E4E4;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0 0 1 0;
+    -fx-padding: 0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 0;
+}

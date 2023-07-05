@@ -1,0 +1,18 @@
+.btn{
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-underline: true;
+    -fx-font-style: italic;
+}
+
+.tf {
+    -fx-border-color: E4E4E4;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0 0 1 0;
+    -fx-padding: 0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 0;
+}
